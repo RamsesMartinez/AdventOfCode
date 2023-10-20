@@ -9,7 +9,7 @@ with open(file, 'r') as file:
     for line in file:
         if line.strip():
             aux_max_value += int(line)
-        else:
+        else:  # Llegue al \n
             max_value = max_value if max_value > aux_max_value else aux_max_value
             aux_max_value = 0
     print(max_value)
